@@ -1,0 +1,161 @@
+/*
+  ========================================
+  Fonts
+  ========================================
+*/
+
+h1 {
+	text-align: center;
+	font-family: 'Knewave', cursive;
+	color: #0DEBFF;
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+#btn-stop {
+	background-color: red;
+}
+
+/*
+  ========================================
+  Game Container
+  ========================================
+*/
+#game-container {
+	border: 1px solid #fff;
+	background-color: gray;
+	margin: 0 auto;
+	width: 702px;
+}
+
+.grid {
+	border: 1px solid #fff;
+	height: 100px;
+	width: 100px;
+	background-color: #fff;
+	text-align: center;
+}
+
+#box-0 {
+	float: left;
+}
+#box-1 {
+	float: left;
+}
+#box-2 {
+	float: left;
+}
+#box-3 {
+	float: left;
+}
+#box-4 {
+	float: left;
+}
+#box-5 {
+	float: left;
+}
+#box-6 {
+	float: left;
+}
+#box-7 {
+	float: left;
+}
+#box-8 {
+	float: left;
+}
+#box-9 {
+	float: left;
+}
+#box-10 {
+	float: left;
+}
+#box-11 {
+	float: left;
+}
+#box-12 {
+	float: left;
+}
+#box-13 {
+	float: left;
+}
+#box-14 {
+	float: left;
+}
+#box-15 {
+	float: left;
+}
+#box-16 {
+	float: left;
+}
+#box-17 {
+	float: left;
+}
+#box-18 {
+	float: left;
+}
+#box-19 {
+	float: left;
+}
+#box-20 {
+	float: left;
+}
+#box-21 {
+	float: left;
+}
+#box-22 {
+	float: left;
+}
+#box-23 {
+	float: left;
+}
+#box-24 {
+	float: left;
+}
+#box-25 {
+	float: left;
+}
+#box-26 {
+	float: left;
+}
+#box-27 {
+	float: left;
+}
+#box-28 {
+	float: left;
+}
+#box-29 {
+	float: left;
+}
+#box-30 {
+	float: left;
+}
+#box-31 {
+	float: left;
+}
+#box-32 {
+	float: left;
+}
+#box-33 {
+	float: left;
+}
+#box-34 {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+
+.custom-cursor {
+	cursor: url('http://media.salon.com/2012/11/shutterstock_57341071-458x307.jpg'), auto;
+}
+
+
+.display-hide {
+	display: none;
+}
+
