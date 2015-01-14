@@ -46,7 +46,7 @@
 
     <div id="game-container">
 
-        <audio id="test-audio" src="cow.wav"></audio>
+        <audio id="test-audio" src="aud/cat.mp3"></audio>
 
         <div class="grid custom-cursor" id="box-0">
             <a class="display-hide cat" href="#">
@@ -244,7 +244,7 @@
     function runGame() {
 
         var interval = 1000;
-        var timeStart = 60;
+        var timeStart = 10;
         var endTime = 0;
         scoreCount = 0;
 
@@ -255,8 +255,8 @@
             var scoreBoard = $('#score, #timer');
 
             if (timeStart <= endTime ) {
-
-                timer.text('Timer | ' + timeStart);
+                $(score).text('Score | ' + scoreCount);
+                $(timer).text('Timer | ' + timeStart);
                 stopGame();
 
             } else {
@@ -269,16 +269,17 @@
                 timeStart--;
                 ranNum = randomNum();
                 // dispaly the relevant cat box based on the random num
-                $(cat).each( function(index) {
-                    if (ranNum == index) {
-                        catSelection = cat[index];
-                        $(catSelection).children()
-                            .fadeIn(500)
-                            .delay(500)
-                            .fadeOut();
-                    }
+                    $(cat).each( function(index) {
+                        if (ranNum == index) {
+                            catSelection = cat[index];
+                            $(catSelection).children()
+                                .fadeIn(500)
+                                .delay(500)
+                                .fadeOut();
+                        }
 
-                });
+                    });
+
             }
 
 
