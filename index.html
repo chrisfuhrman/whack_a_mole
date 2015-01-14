@@ -17,25 +17,35 @@
 
     <link href='http://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
 
-
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Whack a cat</h1>
-    <div id="button-container">
-        <button type="button" class="btn btn-primary btn-lg">Start Game</button>
-        <button type="button" class="btn btn-primary btn-lg" id="btn-stop">Stop Game</button>
+    <div>
+        <span class="display-hide" id="score-board"></span>
+        <span class="display-hide" id="timer"></span>
     </div>
-<!--     <div>
-        <button type="button" class="btn btn-primary btn-lg" id="btn-stop">Stop Game</button>
 
-    </div> -->
+<div class="container">
+    
+    <h1>Whack a cat</h1>
 
+    <div id="button-container">
+        <button type="button" class="btn btn-primary btn-lg" id="btn-start">Start Game</button>
+        <button type="button" class="btn btn-primary btn-lg display-hide" id="btn-stop">Stop Game</button>
+    </div>
 
+    <div id="final-content">
+        <p id="final-message"></p>
+        <p id="final-score"></p>
+    </div>
+
+   <div id="button-container">
+        <button type="button" class="display-hide btn btn-primary btn-lg" id="btn-again">Play again?</button>
+    </div>
 
     <div id="game-container">
-  
+  <a href=""></a>
         <div class="grid custom-cursor" id="box-0">
             <img class="display-hide cat" src="img/small_cat_.png">
         </div>
@@ -120,28 +130,6 @@
        <div class ="grid" id="box-27">
             <img class="display-hide cat" src="img/small_cat_.png">
         </div>
-       <div class ="grid" id="box-28">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-29">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-30">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-31">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-32">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-33">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-       <div class ="grid" id="box-34">
-            <img class="display-hide cat" src="img/small_cat_.png">
-        </div>
-
 
         <div class="clear"></div>
 
@@ -157,46 +145,132 @@
 
 <script>
 
-// (function() {
 
-    var boxLocation = $('#game-container').children();
+// - add custom cursor
+// - jquery for keeping score & timer
+// - background for scoreboard/ timer
 
+(function() {
+
+
+    var whackGame, catSelection, scoreCount, scoreBoard;
+    var cat = $('#game-container').children();
+    var btnAgain = $('#btn-again');
+    var btnStart = $('#btn-start');
+    var btnStop = $('#btn-stop');
+
+    // Function to generate a random # btwn 0 - 34
     function randomNum() {
-        ranNum = Math.floor(Math.random() * 34 );
+        ranNum = Math.floor(Math.random() * 29 );
 
         return ranNum;
-    } 
+    }
 
-    var interval = 1000;
-    var count = 0;
-    var max = 10;
+    // Function to stop the game (remove cats)
+    function stopGame() {
 
-    var intervalId = setInterval(function () {
-    
-        if (count >= max) {
-            clearInterval(intervalId);
-        } else {
-            count++;
-            ranNum = randomNum();
-            $(boxLocation).each( function(index) {
-                if (ranNum == index) {
-                    var choice = boxLocation[index];
-                    $(choice).children()
-                        .fadeIn(500)
-                        .delay(8000)
-                        .fadeOut();
-                }
+        // stops cats from appearing
+        clearInterval(whackGame);
 
-            });
-        }
+        // After 1 sec, slide up the scoreboard and hide the stop btn
+        setTimeout(function () {
+            $('#score-board, #timer').slideUp();
+            $(btnStop).hide();
+        }, 1000);
+        
+        // After 1.5 secs, hide start btn, show play again button, and final content for user
+        setTimeout(function () {
+            $(btnAgain).show();
+            $(btnStart).hide();
+            // final content for user
+            $('#final-message').text('You are awesome!');
+            $('#final-score').text('You scored ' + scoreCount + ' points');
+        }, 1500);
+
+    }
+
+    // Function to run the whack a cat game
+    function runGame() {
+
+        var interval = 1000;
+        var timeStart = 5;
+        var endTime = 0;
+        scoreCount = 0;
+
+        // set the 
+        whackGame = setInterval(function () {
+            var timer = $('#timer');
+            var scoreBoard = $('#score-board');
+
+            if (timeStart <= endTime ) {
+
+                timer.text('Timer | ' + timeStart);
+                stopGame();
+
+            } else {
+                $(scoreBoard).text('Score | ' + scoreCount);
+                console.log(scoreBoard);
+                $(timer).text('Timer | ' + timeStart);
+                console.log(timer);
+                timeStart--;
+                ranNum = randomNum();
+                // dispaly the relevant cat box based on the random num
+                $(cat).each( function(index) {
+                    if (ranNum == index) {
+                        catSelection = cat[index];
+                        $(catSelection).children()
+                            .fadeIn(500)
+                            .delay(500)
+                            .fadeOut();
+                    }
+
+                });
+            }
 
 
-    }, interval);
+        }, interval);
 
-
+        // functionality runs once you've whacked a cat
         $('.cat').on('click', function() {
             $(this).hide();
+
+            scoreCount++;
+            $(scoreBoard).text('Score | ' + scoreCount);
+            // return scoreCount;
         });
+
+    }
+
+  
+    
+    // Start the game by clicking this btn
+    $(btnStart).on('click', function() {
+        $(this).hide()
+            .siblings().show();
+
+        $('#score-board, #timer').slideDown();
+
+        runGame();
+    });
+
+
+    var stopBtn = $(btnStop);
+    // Stop the game by clicking this btn
+    $(stopBtn).on('click', function() {
+        stopGame();
+    });
+
+    // Restart the game by clicking this btn
+    $(btnAgain).on('click', function() {
+        $(this).hide();
+        $('#final-content').hide();
+        $(stopBtn).show();
+
+        $('#score-board, #timer').slideDown();
+
+        runGame();
+    });
+
 
 
     // $('img').hide().fadeIn();
@@ -206,7 +280,7 @@
     // });
 
 
-// })();
+})();
 
 
 
