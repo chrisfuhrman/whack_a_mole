@@ -8,6 +8,7 @@ h1 {
 	text-align: center;
 	font-family: 'Knewave', cursive;
 	color: #0DEBFF;
+	font-size: 4em;
 }
 
 /*
@@ -17,6 +18,42 @@ h1 {
 */
 #btn-stop {
 	background-color: red;
+}
+
+#button-container {
+	text-align: center;
+}
+
+/*
+  ========================================
+  Score Keeper & Timer / Final Screen as well
+  ========================================
+*/
+
+#score-board, #timer, #final-message, #final-score {
+	font-family: 'Knewave', cursive;
+	font-size: 3em;
+}
+
+#final-message, #final-score {
+
+	color: #26FFA8;
+}
+
+#score-board {
+	color: #26FFA8;
+	margin-left: 15px;
+}
+
+#timer {
+	color: #FF0000;
+	margin-right: 15px;
+	float: right;
+}
+
+#final-content {
+	text-align: center;
+	margin: 50px;
 }
 
 /*
@@ -121,27 +158,6 @@ h1 {
 	float: left;
 }
 #box-27 {
-	float: left;
-}
-#box-28 {
-	float: left;
-}
-#box-29 {
-	float: left;
-}
-#box-30 {
-	float: left;
-}
-#box-31 {
-	float: left;
-}
-#box-32 {
-	float: left;
-}
-#box-33 {
-	float: left;
-}
-#box-34 {
 	float: left;
 }
 
