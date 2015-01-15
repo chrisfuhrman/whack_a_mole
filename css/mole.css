@@ -173,8 +173,14 @@ h1 {
 }
 
 
-body {
-	cursor: url('/img/mouse_cursor.png'), auto;
+body, img {
+	cursor: url('/img/mouse_cursor.png') 50 33.5, auto;
+	 /*cursor: none;*/
+   /*  width: 97px;
+     height: 137px;*/
+ /*    top: 0;
+     left: 0;
+     z-index: 10000;*/
 }
 
 
