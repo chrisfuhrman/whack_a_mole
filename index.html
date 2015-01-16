@@ -26,307 +26,124 @@
         <span class="display-hide" id="timer"></span>
     </div>
 
-<div class="container">
-    
-    <h1>Whack a cat</h1>
+    <div class="container">
+        
+        <h1>Whack a cat</h1>
 
-    <div id="button-container">
-        <button type="button" class="btn btn-primary btn-lg" id="btn-start">Start Game</button>
-        <button type="button" class="btn btn-primary btn-lg display-hide" id="btn-stop">Stop Game</button>
+        <div id="button-container">
+            <button type="button" class="btn btn-primary btn-lg" id="btn-start">Start Game</button>
+            <button type="button" class="btn btn-primary btn-lg display-hide" id="btn-stop">Stop Game</button>
+        </div>
+
+        <div id="final-content">
+            <p id="final-message"></p>
+            <p id="final-score"></p>
+        </div>
+
+       <div id="button-container">
+            <button type="button" class="display-hide btn btn-primary btn-lg" id="btn-again">Play again?</button>
+        </div>
+        
+        <audio id="cat-audio" src="aud/cat.mp3"></audio>
+        
+        <div id="game-container">
+
+            <div class="grid custom-cursor" id="box-0">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class="grid" id="box-1">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-2">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-3">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-4">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-5">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-6">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-7">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-8">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-9">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-10">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-11">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-12">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-13">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-14">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-15">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-16">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-17">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-18">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-19">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-20">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            <div class ="grid" id="box-21">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-22">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-23">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-24">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-25">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-26">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+           <div class ="grid" id="box-27">
+                <img src="img/cat_small.png" class="display-hide cat">
+            </div>
+            
+
+            <div class="clear"></div>
+
+        </div>
     </div>
-
-    <div id="final-content">
-        <p id="final-message"></p>
-        <p id="final-score"></p>
-    </div>
-
-   <div id="button-container">
-        <button type="button" class="display-hide btn btn-primary btn-lg" id="btn-again">Play again?</button>
-    </div>
-
-    <div id="game-container">
-
-        <audio id="test-audio" src="aud/cat.mp3"></audio>
-
-        <div class="grid custom-cursor" id="box-0">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class="grid" id="box-1">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-2">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-3">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-4">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-5">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-6">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-7">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-8">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-9">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-10">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-11">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-12">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-13">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-14">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-15">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-16">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-17">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-18">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-19">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-20">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-        <div class ="grid" id="box-21">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-22">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-23">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-24">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-25">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-26">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-       <div class ="grid" id="box-27">
-            <a class="display-hide cat" href="#">
-                <img src="img/cat_small.png">
-            </a>
-        </div>
-
-        <div class="clear"></div>
-
-    </div>
-</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script>
+<script type="text/javascript" src="js/script.js"></script>
 
-(function() {
-
-
-    var whackGame, catSelection, scoreCount, score;
-    var cat = $('#game-container').children();
-    var btnAgain = $('#btn-again');
-    var btnStart = $('#btn-start');
-    var btnStop = $('#btn-stop');
-
-
-
-    // Function to generate a random # btwn 0 - 28
-    function randomNum() {
-        ranNum = Math.floor(Math.random() * 29 );
-
-        return ranNum;
-    }
-
-    // Function to stop the game (remove cats)
-    function stopGame() {
-
-        // stops cats from appearing
-        clearInterval(whackGame);
-
-        // After 1 sec, slide up the score and hide the stop btn
-        setTimeout(function () {
-            $('#score, #timer').slideUp();
-            $(btnStop).hide();
-        }, 1000);
-        
-        // After 1.5 secs, hide start btn, show play again button, and final content for user
-        setTimeout(function () {
-            $(btnAgain).show();
-            $(btnStart).hide();
-            // final content for user
-            $('#final-message').text('You are awesome!');
-            $('#final-score').text('You scored ' + scoreCount + ' points');
-        }, 1500);
-
-    }
-
-    // Function to run the whack a cat game
-    function runGame() {
-
-        var interval = 1000;
-        var timeStart = 10;
-        var endTime = 0;
-        scoreCount = 0;
-
-        // set the 
-        whackGame = setInterval(function () {
-            var timer = $('#timer');
-            var score = $('#score');
-            var scoreBoard = $('#score, #timer');
-
-            if (timeStart <= endTime ) {
-                $(score).text('Score | ' + scoreCount);
-                $(timer).text('Timer | ' + timeStart);
-                stopGame();
-
-            } else {
-
-                $(score).text('Score | ' + scoreCount);
-                $(timer).text('Timer | ' + timeStart);
-                // Slide score down
-                $(scoreBoard).slideDown();
-
-                timeStart--;
-                ranNum = randomNum();
-                // dispaly the relevant cat box based on the random num
-                    $(cat).each( function(index) {
-                        if (ranNum == index) {
-                            catSelection = cat[index];
-                            $(catSelection).children()
-                                .fadeIn(500)
-                                .delay(500)
-                                .fadeOut();
-                        }
-
-                    });
-
-            }
-
-
-        }, interval);
-
-        // functionality runs once you've whacked a cat
-        $('.cat').on('click', function() {
-            $(this).hide();
-
-            $('#test-audio').trigger('play');
-            // add 1 point to scoreCount when cat is clicked
-            scoreCount++;
-        });
-
-    }
-
-
-    // Start the game by clicking this btn
-    $(btnStart).on('click', function() {
-        $(this).hide()
-            .siblings().show();
-
-        runGame();
-    });
-
-    // Stop the game by clicking this btn
-    $(btnStop).on('click', function() {
-        // run stopGame function to end game
-        stopGame();
-    });
-
-    // Restart the game by clicking this btn
-    $(btnAgain).on('click', function() {
-        $(this).hide();
-        $('#final-content').hide();
-        $(btnStop).show();
-
-        // run runGame function upon click
-        runGame();
-    });
-
-
-})();
-
-
-
-</script>
 
 
 </body>
